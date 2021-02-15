@@ -13,7 +13,7 @@ package firstPackage;
 public class AbstractDemo {
 
 	public static void main(String[] args) {
-		PhonePhaseOne obj = new PhonePhaseThree(); // cannot instantiate the abstract class
+		PhonePhaseOne obj = new PhonePhaseFour(); // cannot instantiate the abstract class
 		obj.call();
 		obj.voiceAssistant();
 		obj.wirelessCharging();
@@ -39,12 +39,16 @@ abstract class PhonePhaseTwo extends PhonePhaseOne {
 	}
 }
 
-class PhonePhaseThree extends PhonePhaseTwo { // Concrete class
+abstract class PhonePhaseThree extends PhonePhaseTwo {
 	public void wirelessCharging() {
 		System.out.println("Wireless Charging...");
 	}
 
+}
+
+class PhonePhaseFour extends PhonePhaseThree { // Concrete class
 	public void zenmode() {
 		System.out.println("Zen Mode...");
 	}
+
 }
