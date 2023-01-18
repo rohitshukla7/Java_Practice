@@ -16,14 +16,21 @@ public class UpdateXML {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse("path/to/xml/file.xml");
-            
+
             // Get the "trader_initials" node
             NodeList traderInitialsNodeList = doc.getElementsByTagName("trader_initials");
             Node traderInitialsNode = traderInitialsNodeList.item(0);
-            
+
             // Update the "trader_initials" node's value
-            traderInitialsNode.setTextContent("new_value");
+            traderInitialsNode.setTextContent("new_trader_initials_value");
             
+            // Get the "user_login" node
+            NodeList userLoginNodeList = doc.getElementsByTagName("user_login");
+            Node userLoginNode = userLoginNodeList.item(0);
+            
+            // Update the "user_login" node's value
+            userLoginNode.setTextContent("new_user_login_value");
+
             // Save the changes back to the XML file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
