@@ -42,3 +42,15 @@ public class UpdateXML {
         }
     }
 }
+
+
+For printing updated XML data
+// Save the changes back to the XML file
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(new StringWriter());
+            transformer.transform(source, result);
+            
+            // Print the updated XML data
+            System.out.println(result.getWriter().toString());
