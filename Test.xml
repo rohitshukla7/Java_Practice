@@ -1,0 +1,23 @@
+<SOAP-ENV:Envelope>
+<SOAP-ENV:Body>
+<ns1:put xmlns:nsl = "urn:otcOpt" SOAP-ENV:encoding style = "http://schemas.xmlsoap.org/soap/encoding/">
+<msgtr xsi:type="xsd:string"> &lt;?xml version=&quot;1.0&quot; encoding = &quot;UTF-8&quot;?&gt;
+&lt;request xmlns:xsi=&quot;http://www.w3.org/1999/XMLSchema-instance&quote;request.xsd&quot;&gt;
+&lt;user_login&gt;roshukla&lt;/user_login&gt;
+&lt;mbody&gt;
+&lt;data&gt;
+&lt;trader_initials&gt;&lt;![CDATA[CK7]]&gt;&lt;/trader_initials&gt;
+&lt;/data&gt;
+&lt;/mbody&gt;
+&lt;/request&gt;
+</msgtr>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+Write a java code to update "CK7" value in above xml
+
+
+
+catch (Exception e) {
+        e.printStackTrace();
+    }
