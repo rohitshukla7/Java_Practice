@@ -48,5 +48,9 @@ public class XMLParser {
         Node traderInitialsNode = traderInitialsNodes.item(0);
         String traderInitialsValue = traderInitialsNode.getTextContent();
         System.out.println("trader_initials value: " + traderInitialsValue);
+        
+        //now updating value for trader initial
+        traderInitialsNode.setTextContent("CX2");
+        System.out.println("Updated Value:"+ traderInitialsNode.getTextContent());
     }
 }
