@@ -3,11 +3,12 @@ import java.util.HashMap;
 public class StringManipulation {
     public static void main(String[] args) {
         String str = "Rohit Shukla";
-        printReverseOfString(str);
-        System.out.println("  ");
-        printReverseSentence(str);
-        System.out.println("  ");
-        countOfCharacters(str);
+//        printReverseOfString(str);
+//        System.out.println("  ");
+//        printReverseSentence(str);
+//        System.out.println("  ");
+        //countOfCharacters(str);
+        reverseSubstring(str);
     }
 
     private static void printReverseOfString(String str){
@@ -43,6 +44,17 @@ public class StringManipulation {
 
         for (char ch : charCountmap.keySet()){
             System.out.println(ch + ":" + charCountmap.get(ch));
+        }
+
+    }
+
+    private static void reverseSubstring(String str) {
+        // Rohit Shukla
+        for (int i=0;i<str.length();i+=2){
+            String string = str.substring(i, i+2);
+            StringBuilder sb = new StringBuilder(string);
+
+            System.out.print(sb.reverse().toString());
         }
 
     }
